@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+$feature-flags: (
+  enable-css-custom-properties: true,
+  grid-columns-16: true,
+);
+
+@import 'carbon-components/scss/globals/scss/styles';
+@import 'carbon-components/scss/globals/scss/_css--helpers.scss';
+@import 'carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/_mixins.scss';
+
+:root {
+  @include carbon--theme($carbon--theme--g100, true);
+}
